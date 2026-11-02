@@ -1,0 +1,2 @@
+# Bundled data files must be byte-identical on every platform.
+*.csv text eol=lf
