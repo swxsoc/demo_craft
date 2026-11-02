@@ -5,9 +5,9 @@
     "cookiecutter": {
         "mission_name": "demo",
         "instr_name": "craft",
-        "author_name": "Jane Doe",
-        "author_email": "jane.doe@notarealemail.com",
-        "github_repo": "",
+        "author_name": "James Ray",
+        "author_email": "jamesarthurray@gmail.com",
+        "github_repo": "https://github.com/swxsoc/demo_craft",
         "readthedocs_url": "",
         "project_url": "",
         "minimum_python_version": "3.12",

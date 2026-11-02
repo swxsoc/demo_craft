@@ -1,6 +1,6 @@
+import logging
 import os
 import sys
-import logging
 
 from astropy.logger import AstropyLogger
 
@@ -21,7 +21,8 @@ class MyLogger(AstropyLogger):
     passed on to other loggers (e.g., from Astropy).
     """
 
-    # Override the existing _showwarning() to capture SunpyWarning instead of AstropyWarning
+    # Override the existing _showwarning() to capture craftWarning instead of
+    # AstropyWarning
     def _showwarning(self, *args, **kwargs):
         # Bail out if we are not catching a warning from SunPy
         if not isinstance(args[0], craftWarning):

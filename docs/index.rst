@@ -1,7 +1,7 @@
 Documentation
 -------------
 
-This is the documentation for demo craft.
+This is the documentation for ``demo_craft``, the instrument package for the craft instrument of the SWxSOC demo mission.
 
 .. toctree::
    :maxdepth: 2

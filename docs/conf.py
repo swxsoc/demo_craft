@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Configuration file for the Sphinx documentation builder.
 #
@@ -12,8 +11,8 @@ sys.path.insert(0, os.path.abspath(".."))
 # -- Project information -----------------------------------------------------
 
 project = "demo_craft"
-copyright = ""
-author = "The demo craft Team"
+copyright = "2026, SWxSOC"
+author = "James Ray"
 
 # The full version, including alpha/beta/rc tags
 from demo_craft import __version__
@@ -108,24 +107,24 @@ html_theme = "pydata_sphinx_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-#html_logo = "logo/craft_logo.png"
-#html_favicon = "logo/favicon.ico"
-#html_css_files = [
+# html_logo = "logo/craft_logo.png"
+# html_favicon = "logo/favicon.ico"
+# html_css_files = [
 #    "css/custom.css",
-#]
+# ]
 
 html_theme_options = {
-   "announcement": "This package is under active development.  If you'd like to contribute, check out our <a href=''>GitHub repository</a>.",
-   "use_edit_page_button": True,
-   "back_to_top_button": True,
+    "announcement": "This package is under active development.  If you'd like to contribute, check out our <a href='https://github.com/swxsoc/demo_craft'>GitHub repository</a>.",
+    "use_edit_page_button": True,
+    "back_to_top_button": True,
 }
 
 html_context = {
-	"display_github": True,
-	"github_user": "demo",
-	"github_repo": "demo_craft",
-	"github_version": "main",
-	"conf_py_path": "/docs/",
+    "display_github": True,
+    "github_user": "swxsoc",
+    "github_repo": "demo_craft",
+    "github_version": "main",
+    "conf_py_path": "/docs/",
 }
 
 # Render inheritance diagrams in SVG

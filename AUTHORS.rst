@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Jane Doe <jane.doe@notarealemail.com>
+* James Ray <jamesarthurray@gmail.com>
 
 Contributors
 ------------

@@ -28,9 +28,7 @@ _package_directory = Path(__file__).parent
 _data_directory = _package_directory / "data"
 _test_files_directory = _package_directory / "data" / "test"
 
-log.debug(
-    f"demo_craft version: {__version__}"
-)
+log.debug(f"demo_craft version: {__version__}")
 
 MISSION_NAME = "demo"
 INSTRUMENT_NAME = "craft"

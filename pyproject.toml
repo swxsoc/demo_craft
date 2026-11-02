@@ -1,25 +1,27 @@
 [build-system]
-requires = ["setuptools>=45",
+requires = ["setuptools>=77",
             "setuptools_scm[toml]>=6.2",
             "wheel"]
 build-backend = 'setuptools.build_meta'
 
 [project]
 name = "demo_craft"
-description = "A Python package to process and analyze data from the demo craft instrument."
+description = "Instrument package for the craft instrument of the SWxSOC demo mission."
 readme = "README.rst"
 dynamic = ["version"]
-authors = [{name = "Jane Doe", email="jane.doe@notarealemail.com"}]
-license = {file = "LICENSE.rst"}
+authors = [{name = "James Ray", email="jamesarthurray@gmail.com"}]
+license = "Apache-2.0"
+license-files = ["LICENSE.md"]
 requires-python = ">=3.12"
 keywords = ["nasa mission", "space weather"]
 classifiers = [
     "Development Status :: 3 - Alpha",
-    "License :: OSI Approved :: Apache 2.0",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Physics",
@@ -29,6 +31,12 @@ dependencies = [
   'numpy>=1.16.0',
   'swxsoc @ git+https://github.com/swxsoc/swxsoc.git@main',
 ]
+
+[project.urls]
+Homepage = "https://github.com/swxsoc/demo_craft"
+Repository = "https://github.com/swxsoc/demo_craft"
+Issues = "https://github.com/swxsoc/demo_craft/issues"
+Changelog = "https://github.com/swxsoc/demo_craft/blob/main/CHANGELOG.rst"
 
 [project.optional-dependencies]
 dev = [
@@ -50,11 +58,11 @@ test = [
 
 style = ['ruff']
 
+[tool.setuptools.packages.find]
+include = ["demo_craft*"]
+
 [tool.setuptools.package-data]
 "demo_craft.data" = ["**"]
-
-[tool.setuptools]
-packages = ["demo_craft"]
 
 [tool.setuptools_scm]
 write_to = "demo_craft/_version.py"
@@ -86,3 +94,12 @@ omit = [
   '*/demo_craft/version*',
 ]
 
+[tool.ruff]
+line-length = 88
+extend-exclude = ["demo_craft/_version.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/conf.py" = ["E402", "E501"]

@@ -148,6 +148,7 @@ docs/generated
 docs/api
 docs/whatsnew/latest_changelog.txt
 demo_craft/version.py
+demo_craft/_version.py
 htmlcov/
 
 # General
