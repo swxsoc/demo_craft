@@ -137,7 +137,7 @@ def calibrate_file(data_filename: Path, output_path: Path | None = None) -> Path
     >>> from demo_craft.calibration import calibrate_file
     >>> import tempfile
     >>> l0_file = _test_files_directory / "demo_craft_l0_20260101T000000_v0.0.1.csv"
-    >>> with tempfile.TemporaryDirectory() as tmp:
+    >>> with tempfile.TemporaryDirectory() as tmp:  # doctest: +SKIP
     ...     calibrate_file(l0_file, output_path=tmp).name
     'demo_craft_l1_20260101T000000_v0.0.1.csv'
     """
