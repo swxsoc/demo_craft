@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=45",
+            "setuptools_scm[toml]>=6.2",
+            "wheel"]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = "demo_craft"
+description = "A Python package to process and analyze data from the demo craft instrument."
+readme = "README.rst"
+dynamic = ["version"]
+authors = [{name = "Jane Doe", email="jane.doe@notarealemail.com"}]
+license = {file = "LICENSE.rst"}
+requires-python = ">=3.12"
+keywords = ["nasa mission", "space weather"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache 2.0",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  'astropy>=4.1.0',
+  'numpy>=1.16.0',
+  'swxsoc @ git+https://github.com/swxsoc/swxsoc.git@main',
+]
+
+[project.optional-dependencies]
+dev = [
+  "demo_craft[docs,test,style]"
+]
+
+docs = [
+  'sphinx',
+  'sphinx-automodapi',
+  'pydata-sphinx-theme',
+]
+
+test = [
+  'pytest',
+  'pytest-astropy',
+  'pytest-cov',
+  'coverage[toml]'
+]
+
+style = ['ruff']
+
+[tool.setuptools.package-data]
+"demo_craft.data" = ["**"]
+
+[tool.setuptools]
+packages = ["demo_craft"]
+
+[tool.setuptools_scm]
+write_to = "demo_craft/_version.py"
+
+[tool.pytest.ini_options]
+testpaths = [
+   "demo_craft/tests",
+   "docs"
+]
+doctest_plus = "enabled"
+text_file_format = "rst"
+addopts = "--doctest-rst"
+
+[tool.coverage.run]
+omit = [
+  'demo_craft/__init*',
+  'demo_craft/conftest.py',
+  'demo_craft/*setup_package*',
+  'demo_craft/tests/*',
+  'demo_craft/*/tests/*',
+  'demo_craft/extern/*',
+  'demo_craft/version*',
+  '*/demo_craft/__init*',
+  '*/demo_craft/conftest.py',
+  '*/demo_craft/*setup_package*',
+  '*/demo_craft/tests/*',
+  '*/demo_craft/*/tests/*',
+  '*/demo_craft/extern/*',
+  '*/demo_craft/version*',
+]
+

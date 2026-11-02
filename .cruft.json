@@ -1,0 +1,21 @@
+{
+  "template": "https://github.com/swxsoc/instrument_pkg_template.git",
+  "commit": "fff54637e8cb4164f84b6e402a351c324f68eac4",
+  "context": {
+    "cookiecutter": {
+        "mission_name": "demo",
+        "instr_name": "craft",
+        "author_name": "Jane Doe",
+        "author_email": "jane.doe@notarealemail.com",
+        "github_repo": "",
+        "readthedocs_url": "",
+        "project_url": "",
+        "minimum_python_version": "3.12",
+        "license": "Apache Software License 2.0",
+        "intellectual_property": "US Government (no copyright)",
+        "year": "2026"
+    }
+  },
+  "directory": null,
+  "checkout": null
+}
